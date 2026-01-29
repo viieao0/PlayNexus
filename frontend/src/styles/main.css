@@ -1,0 +1,529 @@
+/* =========================
+   DESIGN TOKENS
+========================= */
+:root {
+  --bg-main: #020617;
+  --bg-glass: rgba(255, 255, 255, 0.06);
+
+  --neon-cyan: #00ffff;
+  --neon-blue: #4cc9f0;
+  --neon-purple: #7b5cff;
+
+  --text-main: #e6f1ff;
+  --text-muted: #9aa4b2;
+}
+
+/* =========================
+   RESET + GLOBAL
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Orbitron", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #111827, #020617);
+  color: var(--text-main);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 32px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+nav .logo span {
+  color: var(--neon-cyan);
+}
+
+nav .links a {
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+nav .links a:hover {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+/* =========================
+   HERO / LANDING
+========================= */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 80px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  text-shadow: 0 0 30px var(--neon-cyan);
+}
+.hero h1 span {
+  background: linear-gradient(
+    90deg,
+    var(--neon-cyan),
+    var(--neon-blue),
+    var(--neon-purple)
+  );
+
+  /* Standard property */
+  background-clip: text;
+
+  /* WebKit compatibility */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  color: transparent;
+}
+
+
+.hero p {
+  max-width: 700px;
+  margin-top: 24px;
+
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* =========================
+   FORMS
+========================= */
+form {
+  background: var(--bg-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+
+  padding: 30px;
+  border-radius: 14px;
+
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.08);
+}
+
+form h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 12px;
+
+  border-radius: 6px;
+  border: none;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+
+  font-family: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  padding: 14px 28px;
+
+  background: linear-gradient(
+    90deg,
+    var(--neon-cyan),
+    var(--neon-blue)
+  );
+
+  border: none;
+  border-radius: 6px;
+
+  font-weight: 700;
+  cursor: pointer;
+
+  color: #000;
+  box-shadow: 0 0 20px var(--neon-cyan);
+
+  transition: 0.3s;
+}
+
+button:hover {
+  box-shadow: 0 0 40px var(--neon-cyan);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   CARDS (Games / Reviews)
+========================= */
+.card {
+  background: var(--bg-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+
+  padding: 20px;
+  border-radius: 14px;
+
+  margin: 16px 0;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.05);
+}
+
+.card h4 {
+  margin-top: 0;
+}
+
+/* =========================
+   DASHBOARD HEADERS
+========================= */
+.dashboard-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px var(--neon-cyan);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+}
+/* =========================
+   LANDING PAGE
+========================= */
+
+.landing-wrapper {
+  min-height: 100vh;
+  padding: 40px 60px;
+}
+
+/* Header */
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 12px var(--neon-cyan);
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: linear-gradient(
+    90deg,
+    var(--neon-cyan),
+    var(--neon-blue)
+  );
+  color: #000;
+  box-shadow: 0 0 20px var(--neon-cyan);
+}
+
+.btn.secondary {
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+
+.btn.secondary:hover {
+  background: var(--neon-cyan);
+  color: #000;
+}
+
+/* Hero */
+.landing-hero {
+  margin-top: 120px;
+  max-width: 720px;
+}
+
+.landing-hero h2 {
+  font-size: 56px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-shadow: 0 0 25px var(--neon-cyan);
+}
+
+.landing-hero h2 span {
+  background: linear-gradient(
+    90deg,
+    var(--neon-cyan),
+    var(--neon-purple)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.landing-hero p {
+  margin-top: 24px;
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .landing-wrapper {
+    padding: 30px 20px;
+  }
+
+  .landing-hero h2 {
+    font-size: 36px;
+  }
+
+  .landing-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Landing Layout */
+.landing {
+  min-height: 100vh;
+  padding: 50px 70px;
+}
+
+/* Top bar */
+.landing-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand */
+.brand {
+  font-size: 48px;
+  margin: 0;
+}
+
+/* Buttons in top right */
+.top-actions {
+  display: flex;
+  gap: 14px;
+}
+
+/* Smaller button version for navbar */
+.small {
+  padding: 10px 22px !important;
+  font-size: 16px !important;
+  border-radius: 12px;
+}
+
+/* Hero */
+.landing-content {
+  margin-top: 70px;
+}
+.hero-title {
+  font-size: clamp(44px, 6vw, 78px);
+  line-height: 1.05;
+  font-weight: 800;
+  text-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+  letter-spacing: 1px;
+}
+
+
+.hero-gradient {
+  background: linear-gradient(90deg, #00ffff, #5b7cff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-desc {
+  max-width: 650px;   /* ✅ بدل 200px */
+  margin-top: 22px;
+  font-size: 18px;    /* ✅ 22 كبيرة شوي */
+  opacity: 0.85;
+  line-height: 1.7;
+
+  /* ✅ تأكيد ضد مشاكل الالتفاف */
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 0 2rem;
+}
+
+/* ===== Top Navbar ===== */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  padding: 22px 0;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topbar-inner {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #dff7ff;
+  text-shadow: 0 0 18px rgba(0, 255, 255, 0.15);
+}
+
+.topbar-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 18px;
+  opacity: 0.85;
+  color: #dff7ff;
+}
+
+.nav-link:hover {
+  opacity: 1;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.25);
+}
+
+.nav-link.active {
+  opacity: 1;
+  color: #00ffff;
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.35);
+}
+
+.nav-user {
+  font-size: 14px;
+  opacity: 0.75;
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+}
+
+.btn-nav {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 255, 0.35);
+  background: rgba(0, 255, 255, 0.14);
+  color: #eaffff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.12);
+}
+
+.btn-nav:hover {
+  background: rgba(0, 255, 255, 0.2);
+}
+
+.game-cover {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 35px rgba(0,255,255,0.08);
+}
+
+.card {
+  overflow: hidden; /* ✅ مهم عشان الصورة ما تطلع برا */
+}
+
+.card-cover {
+  width: 100%;
+  height: 200px;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* ✅ تخليها غلاف */
+  display: block;
+}
+
+.card-body {
+  padding: 10px 2px; /* خفيف بس */
+}

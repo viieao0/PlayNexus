@@ -1,0 +1,16 @@
+/* src/styles.css */
+body { font-family: Inter, system-ui, Arial; margin: 0; background:#f5f7fb; color:#111; }
+.navbar { display:flex; justify-content:space-between; align-items:center; padding:12px 20px; background:#0b5cff; color:white; }
+.navbar .brand a { color:white; text-decoration:none; font-weight:700; font-size:18px; }
+.navbar .links a { color:white; margin-left:12px; text-decoration:none; }
+.container { padding:20px; max-width:1000px; margin:0 auto; }
+.grid { display:grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); gap:16px; margin-top:12px; }
+.game-card { background:white; padding:16px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+.game-card h3 { margin:0 0 8px 0; }
+.meta { color:#666; font-size:13px; margin-bottom:8px; }
+.desc { color:#333; font-size:14px; margin-bottom:12px; }
+.btn { display:inline-block; padding:8px 12px; background:#0b5cff; color:white; border-radius:6px; text-decoration:none; }
+.card.form { background:white; padding:16px; border-radius:8px; max-width:480px; }
+.card.form input, .card.form textarea { width:100%; padding:8px; margin:8px 0; border:1px solid #ddd; border-radius:6px; }
+.review { background:#fff; padding:12px; border-radius:6px; margin-bottom:8px; box-shadow:0 1px 4px rgba(0,0,0,0.04); }
+.rating { color:#f5a623; }

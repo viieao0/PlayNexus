@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+psycopg2-binary = "*"
+bcrypt = "==4.0.1"
+pyjwt = "*"
+fastapi = "*"
+sqlalchemy = "*"
+pydantic = "*"
+passlib = {extras = ["bcrypt"], version = "*"}
+python-jose = "*"
+python-dotenv = "*"
+uvicorn = "*"
+email-validator = "*"
+python-multipart = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.14"
