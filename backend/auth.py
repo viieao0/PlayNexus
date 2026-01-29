@@ -1,3 +1,5 @@
+# Security: JWT tokens expire after defined duration
+
 import jwt
 from datetime import datetime, timedelta
 from config.environment import secret
