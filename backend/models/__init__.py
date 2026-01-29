@@ -1,4 +1,4 @@
-# SQLAlchemy models package
+# SQLAlchemy models package for PlayNexus
 
 from .user import User
 from .game import Game
