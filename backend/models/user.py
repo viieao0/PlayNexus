@@ -1,3 +1,5 @@
+#TODO: extend user profile with social links
+
 from sqlalchemy import Column, Integer, String, DateTime, Boolean
 from sqlalchemy.orm import relationship
 from datetime import datetime
