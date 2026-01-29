@@ -1,3 +1,5 @@
+# Database engine and session configuration
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 from config.environment import db_URI
