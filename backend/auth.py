@@ -1,3 +1,5 @@
+# JWT utilities handle token creation and validation
+
 # Security: JWT tokens expire after defined duration
 
 import jwt
