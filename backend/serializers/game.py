@@ -1,3 +1,5 @@
+# Game schemas validate input/output for API
+
 from pydantic import BaseModel
 from typing import Optional
 
