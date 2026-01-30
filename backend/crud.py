@@ -1,3 +1,5 @@
+# CRUD layer isolates database logic from routes
+
 from sqlalchemy.orm import Session
 from models.user import User
 from models.game import Game
