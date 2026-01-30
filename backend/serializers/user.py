@@ -1,3 +1,5 @@
+# Pydantic schema for user creation and output
+
 from pydantic import BaseModel, EmailStr
 from typing import Optional
 from datetime import datetime
