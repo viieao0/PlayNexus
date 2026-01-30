@@ -1,4 +1,5 @@
 #TODO: extend user profile with social links
+# User model represents companies, youtubers, and admins
 
 from sqlalchemy import Column, Integer, String, DateTime, Boolean
 from sqlalchemy.orm import relationship
