@@ -1,3 +1,5 @@
+# Review schemas used by youtuber submissions
+
 from pydantic import BaseModel, HttpUrl
 from typing import Optional
 from datetime import datetime
